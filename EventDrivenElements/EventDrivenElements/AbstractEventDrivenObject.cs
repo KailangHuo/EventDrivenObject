@@ -46,13 +46,13 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
         if(_viewModelObservers.Contains(a)) this._viewModelObservers.Remove(a);
     }
 
-    public void UpdateAfterObserverRegistered(IEventDrivenObserver o) {
+    private void UpdateAfterObserverRegistered(IEventDrivenObserver o) {
         foreach (KeyValuePair<string,object> pair in _publishingValueMap) {
             o.PublishUpdate(pair.Key, pair.Value);
         }
     }
 
-    public void UpdateAfterObserverDeregistered() {
+    private void UpdateAfterObserverDeregistered() {
         // not implemented yet...
     }
     
