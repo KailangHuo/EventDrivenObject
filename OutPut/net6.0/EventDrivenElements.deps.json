@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "EvevntDrivenAbstractElements/1.0.0": {
+      "EventDrivenElements/1.0.0": {
         "runtime": {
-          "EvevntDrivenAbstractElements.dll": {}
+          "EventDrivenElements.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "EvevntDrivenAbstractElements/1.0.0": {
+    "EventDrivenElements/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

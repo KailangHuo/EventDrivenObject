@@ -53,7 +53,6 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     }
 
     public void UpdateAfterObserverDeregistered() {
-        // remove relevant propertyName and parameter from the map,
         // not implemented yet...
     }
     
