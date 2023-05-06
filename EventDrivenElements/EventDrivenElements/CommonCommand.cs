@@ -1,8 +1,9 @@
 using System.Windows.Input;
 
-namespace EventDrivenAbstractElements; 
+namespace EventDrivenElements; 
 
-public class CommonCommand : ICommand {
+public class CommonCommand : ICommand{
+    
     private Action<object> _execute;
     private Predicate<object> _canExecute;
 
