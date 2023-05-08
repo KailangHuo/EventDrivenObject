@@ -14,15 +14,15 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
         _publishingValueMap = new Dictionary<string, object>();
     }
 
-    public void PublishUpdate(string PropertyName, object Parameter) {
+    public void PublishEvent(string PropertyName, object Parameter) {
         if (_publishingValueMap.ContainsKey(PropertyName)) _publishingValueMap[PropertyName] = Parameter;
         else _publishingValueMap.Add(PropertyName, Parameter);
         foreach (IEventDrivenObserver observer in _observers) {
-            observer.PublishUpdate(PropertyName, Parameter);
+            observer.PublishEvent(PropertyName, Parameter);
         }
         
         foreach (AbstractEventDrivenViewModel viewModelObserver in _viewModelObservers) {
-            viewModelObserver.PublishUpdate(PropertyName, Parameter);
+            viewModelObserver.PublishEvent(PropertyName, Parameter);
         }
     }
 
@@ -48,7 +48,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
 
     private void UpdateAfterObserverRegistered(IEventDrivenObserver o) {
         foreach (KeyValuePair<string,object> pair in _publishingValueMap) {
-            o.PublishUpdate(pair.Key, pair.Value);
+            o.PublishEvent(pair.Key, pair.Value);
         }
     }
 
