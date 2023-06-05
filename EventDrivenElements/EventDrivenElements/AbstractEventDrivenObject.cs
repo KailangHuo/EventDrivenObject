@@ -1,15 +1,15 @@
 namespace EventDrivenElements; 
 
-public abstract class AbstractEventDrivenObject : IEventDrivenObserver , IDisposable{
+public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     
-    private List<AbstractEventDrivenObject> _observers;
+    private List<IEventDrivenObserver> _observers;
 
     private List<AbstractEventDrivenViewModel> _viewModelObservers;
 
     private Dictionary<string, object> _publishingValueMap;
 
     public AbstractEventDrivenObject() {
-        _observers = new List<AbstractEventDrivenObject>();
+        _observers = new List<IEventDrivenObserver>();
         _viewModelObservers = new List<AbstractEventDrivenViewModel>();
         _publishingValueMap = new Dictionary<string, object>();
     }
@@ -26,7 +26,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver , IDispos
         }
     }
 
-    public void RegisterObserver(AbstractEventDrivenObject o) {
+    public void RegisterObserver(IEventDrivenObserver o) {
         if (o is AbstractEventDrivenViewModel) RegisterViewModel((AbstractEventDrivenViewModel)o);
         else if(!this._observers.Contains(o)) this._observers.Add(o);
         UpdateAfterObserverRegistered(o);
@@ -36,7 +36,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver , IDispos
         if(!this._viewModelObservers.Contains(a)) this._observers.Add(a);
     }
 
-    public void DeregisterObserver(AbstractEventDrivenObject o) {
+    public void DeregisterObserver(IEventDrivenObserver o) {
         if(o is AbstractEventDrivenViewModel) DeregisterViewModel((AbstractEventDrivenViewModel) o);
         else if(_observers.Contains(o)) this._observers.Remove(o);
         UpdateAfterObserverDeregistered();
@@ -58,7 +58,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver , IDispos
     
     
     public virtual void UpdateByEvent(string propertyName, object o) { }
-
+    
     public void Dispose() {
         OnDispose();
         for (int i = 0; i < _observers.Count; i++) {
