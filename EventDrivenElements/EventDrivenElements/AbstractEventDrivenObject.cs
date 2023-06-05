@@ -1,15 +1,15 @@
 namespace EventDrivenElements; 
 
-public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
+public abstract class AbstractEventDrivenObject : IEventDrivenObserver , IDisposable{
     
-    private List<IEventDrivenObserver> _observers;
+    private List<AbstractEventDrivenObject> _observers;
 
     private List<AbstractEventDrivenViewModel> _viewModelObservers;
 
     private Dictionary<string, object> _publishingValueMap;
 
     public AbstractEventDrivenObject() {
-        _observers = new List<IEventDrivenObserver>();
+        _observers = new List<AbstractEventDrivenObject>();
         _viewModelObservers = new List<AbstractEventDrivenViewModel>();
         _publishingValueMap = new Dictionary<string, object>();
     }
@@ -26,7 +26,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
         }
     }
 
-    public void RegisterObserver(IEventDrivenObserver o) {
+    public void RegisterObserver(AbstractEventDrivenObject o) {
         if (o is AbstractEventDrivenViewModel) RegisterViewModel((AbstractEventDrivenViewModel)o);
         else if(!this._observers.Contains(o)) this._observers.Add(o);
         UpdateAfterObserverRegistered(o);
@@ -36,7 +36,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
         if(!this._viewModelObservers.Contains(a)) this._observers.Add(a);
     }
 
-    public void DeregisterObserver(IEventDrivenObserver o) {
+    public void DeregisterObserver(AbstractEventDrivenObject o) {
         if(o is AbstractEventDrivenViewModel) DeregisterViewModel((AbstractEventDrivenViewModel) o);
         else if(_observers.Contains(o)) this._observers.Remove(o);
         UpdateAfterObserverDeregistered();
@@ -58,5 +58,19 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     
     
     public virtual void UpdateByEvent(string propertyName, object o) { }
-    
+
+    public void Dispose() {
+        OnDispose();
+        for (int i = 0; i < _observers.Count; i++) {
+            AbstractEventDrivenObject o = (AbstractEventDrivenObject)_observers[i];
+            DeregisterObserver(o);
+        }
+
+        for (int i = 0; i < _viewModelObservers.Count; i++) {
+            AbstractEventDrivenViewModel o = (AbstractEventDrivenViewModel)_viewModelObservers[i];
+            DeregisterViewModel(o);
+        }
+    }
+
+    protected virtual void OnDispose() { }
 }
