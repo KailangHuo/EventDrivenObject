@@ -33,7 +33,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     }
 
     private void RegisterViewModel(AbstractEventDrivenViewModel a) {
-        if(!this._viewModelObservers.Contains(a)) this._observers.Add(a);
+        if(!this._viewModelObservers.Contains(a)) this._viewModelObservers.Add(a);
     }
 
     public void DeregisterObserver(IEventDrivenObserver o) {
