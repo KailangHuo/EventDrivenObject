@@ -33,7 +33,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     }
 
     private void RegisterViewModel(AbstractEventDrivenViewModel a) {
-        if(!this._viewModelObservers.Contains(a)) this._observers.Add(a);
+        if(!this._viewModelObservers.Contains(a)) this._viewModelObservers.Add(a);
     }
 
     public void DeregisterObserver(IEventDrivenObserver o) {
@@ -59,4 +59,18 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     
     public virtual void UpdateByEvent(string propertyName, object o) { }
     
+    public void Dispose() {
+        OnDispose();
+        for (int i = 0; i < _observers.Count; i++) {
+            AbstractEventDrivenObject o = (AbstractEventDrivenObject)_observers[i];
+            DeregisterObserver(o);
+        }
+
+        for (int i = 0; i < _viewModelObservers.Count; i++) {
+            AbstractEventDrivenViewModel o = (AbstractEventDrivenViewModel)_viewModelObservers[i];
+            DeregisterViewModel(o);
+        }
+    }
+
+    protected virtual void OnDispose() { }
 }
