@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "i+CHuKmpcy3BC+QFUOT/j0/jtuR4xQQIBsRNlCxTFR3pFTkQHpu1+x89+VmhDHzU4r/m6GtDoD3SdWUmuO8NfQ==",
+  "success": true,
+  "projectFilePath": "D:\\git-repo-main\\Personal_GIT\\EventDrivenObject\\EventDrivenElements\\TestMainEntry\\TestMainEntry.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://nexus.uihcloud.cn/repository/nuget-hswgroup-dev/'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
