@@ -4,14 +4,14 @@ namespace EventDrivenElements;
 
 public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenObject, INotifyPropertyChanged {
 
-    private object _hashReferenceObject;
+    public object HashReferenceContext;
 
     public AbstractEventDrivenViewModel() {
         
     }
 
-    public AbstractEventDrivenViewModel(object hashReferenceObject) {
-        if(hashReferenceObject != null)_hashReferenceObject = hashReferenceObject;
+    public AbstractEventDrivenViewModel(object hashReferenceContext) {
+        if(hashReferenceContext != null)HashReferenceContext = hashReferenceContext;
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -23,16 +23,16 @@ public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenObject, 
     #region HASH_AND_EQUALS
 
     public override bool Equals(object? obj) {
-        if (_hashReferenceObject == null) return base.Equals(obj);
+        if (HashReferenceContext == null) return base.Equals(obj);
         if (this == obj) return true;
         if (obj == null || GetType() != obj.GetType()) return false;
         AbstractEventDrivenViewModel eventDrivenViewModel = (AbstractEventDrivenViewModel)obj;
-        return this._hashReferenceObject.Equals(eventDrivenViewModel._hashReferenceObject);
+        return this.HashReferenceContext.Equals(eventDrivenViewModel.HashReferenceContext);
     }
 
     public override int GetHashCode() {
-        if (_hashReferenceObject == null) return base.GetHashCode();
-        return this._hashReferenceObject.GetHashCode();
+        if (HashReferenceContext == null) return base.GetHashCode();
+        return this.HashReferenceContext.GetHashCode();
     }
 
 
