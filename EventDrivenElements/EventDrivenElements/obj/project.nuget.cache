@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6HeX1n2p7H/j7H13rk0V6NbEPFctZAhve74KNKfOjFOvkA7FbahsQGfpwCNd5hi2er8fO8ob1h33NmB+P5RyhQ==",
+  "dgSpecHash": "txZwzjHsJQi1PdUf+d01z3GhMRI75JRiqE/QQ/sAacWnBf6zFpTxPu551fQbtJBY9nodHI8uRDo9gdJ7Ezi5Ew==",
   "success": true,
   "projectFilePath": "D:\\Git-Repo-Main\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\huoka\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\huoka\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\huoka\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512"
+  ],
   "logs": []
 }
