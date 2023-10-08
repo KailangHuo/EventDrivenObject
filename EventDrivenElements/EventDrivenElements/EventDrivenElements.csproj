@@ -9,7 +9,6 @@
         <RepositoryUrl>https://github.com/KailangHuo/EventDrivenObject</RepositoryUrl>
         <RepositoryType>public</RepositoryType>
         <PackageTags>MVVM, EDA, Event-Driven</PackageTags>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
