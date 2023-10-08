@@ -13,3 +13,15 @@ D:\git-repo-main\Personal_GIT\EventDrivenObject\EventDrivenElements\EventDrivenE
 D:\git-repo-main\Personal_GIT\EventDrivenObject\OutPut\net6.0\EventDrivenElements.deps.json
 D:\git-repo-main\Personal_GIT\EventDrivenObject\OutPut\net6.0\EventDrivenElements.dll
 D:\git-repo-main\Personal_GIT\EventDrivenObject\OutPut\net6.0\EventDrivenElements.pdb
+D:\Git-Repo-Main\EventDrivenObject\OutPut\net6.0\EventDrivenElements.deps.json
+D:\Git-Repo-Main\EventDrivenObject\OutPut\net6.0\EventDrivenElements.dll
+D:\Git-Repo-Main\EventDrivenObject\OutPut\net6.0\EventDrivenElements.pdb
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.csproj.AssemblyReference.cache
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.AssemblyInfoInputs.cache
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.AssemblyInfo.cs
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.csproj.CoreCompileInputs.cache
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.dll
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\refint\EventDrivenElements.dll
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\EventDrivenElements.pdb
+D:\Git-Repo-Main\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net6.0\ref\EventDrivenElements.dll

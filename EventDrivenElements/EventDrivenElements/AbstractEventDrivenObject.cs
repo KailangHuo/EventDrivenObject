@@ -25,7 +25,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     /// who are subscribing to this object. This list should only contains objects that belongs
     /// to Model layer
     ///
-    /// 观察者容器, 只存来自Model层的对象
+    /// 订阅者容器, 只存来自Model层的对象
     /// </summary>
     private List<IEventDrivenObserver> _observers;
     
@@ -35,7 +35,7 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     /// who are subscribing to this object. This list should only contains objects that belongs
     /// to View Model layer.
     ///
-    /// ViewModel观察者容器, 只存来自View Model层的对象
+    /// ViewModel订阅者容器, 只存来自View Model层的对象
     /// </summary>
     private List<AbstractEventDrivenViewModel> _viewModelObservers;
 
@@ -74,7 +74,10 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
     /// <summary>
     /// Subscribers registration.
     /// After a registration, this object will notify to the subscriber immediately
-    /// about its published events that saved in the _publishingValueMap.
+    /// about its published events that saved in the _publishingValueMap. i.e. The
+    /// Subscribers will get the history events immediately 
+    ///
+    /// 订阅后, 订阅者会立刻接收到已经存入到 _publishingValueMap 中的内容, 既订阅者会立即获得历史事件
     /// </summary>
     /// <param name="o"></param>
     public void RegisterObserver(IEventDrivenObserver o) {
@@ -87,6 +90,13 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
         if(!this._viewModelObservers.Contains(a)) this._viewModelObservers.Add(a);
     }
 
+    
+    /// <summary>
+    ///  Un-registration. This is to prevent the storage-leak
+    ///
+    ///  取消订阅, 避免内存泄漏 
+    /// </summary>
+    /// <param name="o"></param>
     public void DeregisterObserver(IEventDrivenObserver o) {
         if(o is AbstractEventDrivenViewModel) DeregisterViewModel((AbstractEventDrivenViewModel) o);
         else if(_observers.Contains(o)) this._observers.Remove(o);
@@ -97,6 +107,10 @@ public abstract class AbstractEventDrivenObject : IEventDrivenObserver {
         if(_viewModelObservers.Contains(a)) this._viewModelObservers.Remove(a);
     }
 
+    /// <summary>
+    /// as it says, the Subscribers will get the history event immediately
+    /// </summary>
+    /// <param name="o"></param>
     private void UpdateAfterObserverRegistered(IEventDrivenObserver o) {
         foreach (KeyValuePair<string,object> pair in _publishingValueMap) {
             o.UpdateByEvent(pair.Key, pair.Value);
