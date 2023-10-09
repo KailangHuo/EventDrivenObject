@@ -1,19 +1,18 @@
-using System.Reflection;
 using System.Windows.Input;
 
 namespace EventDrivenElements; 
 
-public class CommonCommand : ICommand{
-
+public class AsyncCommand : ICommand{
+    
     private Action<object> _execute;
     
     private Predicate<object> _canExecute;
 
-    public CommonCommand(Action<object> execute) {
+    public AsyncCommand(Action<object> execute) {
         this._execute = execute;
     }
 
-    public CommonCommand(Action<object> execute, Predicate<object> canExecute) {
+    public AsyncCommand(Action<object> execute, Predicate<object> canExecute) {
         this._execute = execute;
         this._canExecute = canExecute;
     }
@@ -34,8 +33,12 @@ public class CommonCommand : ICommand{
     public void Execute(object? parameter) {
         DoBeforeExecute();
         if (CanExecute(parameter)) {
-            _execute(parameter);
-            DoAfterExecute();
+            Thread t = new Thread(() => {
+                _execute(parameter);
+                DoAfterExecute();
+            });
+            t.Start();
+            
         }
     }
 
