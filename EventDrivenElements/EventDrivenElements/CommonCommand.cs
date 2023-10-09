@@ -32,9 +32,13 @@ public class CommonCommand : ICommand{
     public void Execute(object? parameter) {
         DoBeforeExecute();
         if (CanExecute(parameter)) {
-            _execute(parameter);
+            OverrideExecute(parameter);
             DoAfterExecute();
         }
+    }
+
+    protected virtual void OverrideExecute(object parameter = null) {
+        _execute(parameter);
     }
 
     protected virtual void DoBeforeCanExecute() {
