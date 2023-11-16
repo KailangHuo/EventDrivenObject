@@ -22,7 +22,7 @@ namespace EventDrivenElements;
  */
 
 
-public abstract class AbstractEventDrivenObject : IEventObserver {
+public abstract class AbstractEventDrivenModel : IEventObserver {
     
     /// <summary>
     /// This list contains implementing instances of IEventDrivenObserver
@@ -52,7 +52,7 @@ public abstract class AbstractEventDrivenObject : IEventObserver {
     private Dictionary<string, object> _publishingValueMap;
 
     
-    public AbstractEventDrivenObject() {
+    public AbstractEventDrivenModel() {
         _observers = new List<IEventObserver>();
         _viewModelObservers = new List<AbstractEventDrivenViewModel>();
         _publishingValueMap = new Dictionary<string, object>();
@@ -63,7 +63,7 @@ public abstract class AbstractEventDrivenObject : IEventObserver {
     /// </summary>
     /// <param name="PropertyName"></param>
     /// <param name="Parameter"></param>
-    public void PublishEvent(string PropertyName, object Parameter) {
+    protected void PublishEvent(string PropertyName, object Parameter) {
         if (_publishingValueMap.ContainsKey(PropertyName)) _publishingValueMap[PropertyName] = Parameter;
         else _publishingValueMap.Add(PropertyName, Parameter);
         for (int i = 0; i < _observers.Count; i++) {
@@ -87,6 +87,7 @@ public abstract class AbstractEventDrivenObject : IEventObserver {
     /// </summary>
     /// <param name="o"></param>
     public void RegisterObserver(IEventObserver o) {
+        if(this == o) return;
         if (o is AbstractEventDrivenViewModel) RegisterViewModel((AbstractEventDrivenViewModel)o);
         else if(!this._observers.Contains(o)) this._observers.Add(o);
         UpdateAfterObserverRegistered(o);
@@ -142,7 +143,7 @@ public abstract class AbstractEventDrivenObject : IEventObserver {
     public void Dispose() {
         OnDispose();
         for (int i = 0; i < _observers.Count; i++) {
-            AbstractEventDrivenObject o = (AbstractEventDrivenObject)_observers[i];
+            AbstractEventDrivenModel o = (AbstractEventDrivenModel)_observers[i];
             DeregisterObserver(o);
         }
 
