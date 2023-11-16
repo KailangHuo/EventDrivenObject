@@ -17,15 +17,15 @@
           "C:\\Users\\kailang.huo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0-windows"
+          "net6.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {},
           "https://nexus.uihcloud.cn/repository/nuget-hswgroup-dev": {}
         },
         "frameworks": {
-          "net7.0-windows7.0": {
-            "targetAlias": "net7.0-windows",
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
             "projectReferences": {}
           }
         },
@@ -36,8 +36,8 @@
         }
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "imports": [
             "net461",
             "net462",
