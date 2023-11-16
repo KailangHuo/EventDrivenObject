@@ -8,26 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kailang.huo\\.nuget\\packages\\": {}
+    "C:\\Users\\huoka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
+      "projectUniqueName": "D:\\Git-Repo-Main\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
       "projectName": "EventDrivenElements",
-      "projectPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
-      "packagesPath": "C:\\Users\\kailang.huo\\.nuget\\packages\\",
-      "outputPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\obj\\",
+      "projectPath": "D:\\Git-Repo-Main\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
+      "packagesPath": "C:\\Users\\huoka\\.nuget\\packages\\",
+      "outputPath": "D:\\Git-Repo-Main\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kailang.huo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\huoka\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nexus.uihcloud.cn/repository/nuget-hswgroup-dev": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -55,12 +54,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.22, 6.0.22]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.22, 6.0.22]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.22, 6.0.22]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
