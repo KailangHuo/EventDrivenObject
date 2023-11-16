@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\EventDrivenElement.csproj",
-      "projectName": "EventDrivenElement",
-      "projectPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\EventDrivenElement.csproj",
+      "projectUniqueName": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
+      "projectName": "EventDrivenElements",
+      "projectPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
       "packagesPath": "C:\\Users\\kailang.huo\\.nuget\\packages\\",
-      "outputPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\obj\\",
+      "outputPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kailang.huo\\AppData\\Roaming\\NuGet\\NuGet.Config"

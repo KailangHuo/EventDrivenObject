@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace EventDrivenElement; 
+namespace EventDrivenElements; 
 
 /**
  * Author: Kyan Huo

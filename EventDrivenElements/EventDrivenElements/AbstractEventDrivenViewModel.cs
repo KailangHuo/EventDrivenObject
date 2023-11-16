@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace EventDrivenElement; 
+namespace EventDrivenElements; 
 
 public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenObject, INotifyPropertyChanged {
 
