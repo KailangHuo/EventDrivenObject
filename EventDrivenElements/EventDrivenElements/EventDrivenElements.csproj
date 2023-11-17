@@ -1,30 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>net6.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
-        <Title>MVVM_EventDrivenEmelements</Title>
-        <Authors>KyanHuo</Authors>
-        <RepositoryUrl>https://github.com/KailangHuo/EventDrivenObject</RepositoryUrl>
-        <RepositoryType>public</RepositoryType>
-        <PackageTags>MVVM, EDA, Event-Driven</PackageTags>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-    </PropertyGroup>
-    
-    <ItemGroup>
-        <None Include="docs\README.md" Pack="true" PackagePath="\"/>
-    </ItemGroup>
-    
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <OutputPath>..\..\OutPut\</OutputPath>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>..\..\OutPut\</OutputPath>
+        <UseWPF>true</UseWPF>
     </PropertyGroup>
 
 </Project>

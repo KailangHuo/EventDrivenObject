@@ -1,0 +1,11 @@
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\bin\Debug\net7.0-windows\EventDrivenElements.deps.json
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\bin\Debug\net7.0-windows\EventDrivenElements.dll
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\bin\Debug\net7.0-windows\EventDrivenElements.pdb
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\EventDrivenElements.GeneratedMSBuildEditorConfig.editorconfig
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\EventDrivenElements.AssemblyInfoInputs.cache
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\EventDrivenElements.AssemblyInfo.cs
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\EventDrivenElements.csproj.CoreCompileInputs.cache
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\EventDrivenElements.dll
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\refint\EventDrivenElements.dll
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\EventDrivenElements.pdb
+D:\System\Documents\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\obj\Debug\net7.0-windows\ref\EventDrivenElements.dll
