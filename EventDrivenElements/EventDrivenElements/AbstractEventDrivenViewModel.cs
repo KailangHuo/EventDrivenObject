@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace EventDrivenElements; 
 
-public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenObject, INotifyPropertyChanged {
+public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenModel, INotifyPropertyChanged {
 
     public object HashReferenceContext;
 

@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj": {}
+    "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\EventDrivenElement.csproj": {}
   },
   "projects": {
-    "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj": {
+    "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\EventDrivenElement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
-        "projectName": "EventDrivenElements",
-        "projectPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\EventDrivenElements.csproj",
+        "projectUniqueName": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\EventDrivenElement.csproj",
+        "projectName": "EventDrivenElement",
+        "projectPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\EventDrivenElement.csproj",
         "packagesPath": "C:\\Users\\kailang.huo\\.nuget\\packages\\",
-        "outputPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElements\\obj\\",
+        "outputPath": "D:\\System\\Documents\\GitHub\\EventDrivenObject\\EventDrivenElements\\EventDrivenElement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kailang.huo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net7.0-windows"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {},
           "https://nexus.uihcloud.cn/repository/nuget-hswgroup-dev": {}
         },
         "frameworks": {
-          "net6.0-windows7.0": {
-            "targetAlias": "net6.0-windows",
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
             "projectReferences": {}
           }
         },
@@ -36,8 +36,8 @@
         }
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
           "imports": [
             "net461",
             "net462",
