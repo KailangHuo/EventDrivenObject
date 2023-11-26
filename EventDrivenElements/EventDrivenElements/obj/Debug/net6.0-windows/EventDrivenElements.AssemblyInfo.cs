@@ -10,13 +10,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EventDrivenElements")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Kyan Huo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("personal copyright")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute(@"What probs it may solved: In MVVM design pattern, there may have a lot situations that an object container which holds and controls a bunch of sub-objects that need to also receive the status updates or whatever has happened in its holding sub-elements. If you are quite familiar with the schemes that happens among the View and ViewModel layer during MVVM design, you will find its quite easy and charming to apply this mechanism among Model layer and ViewModel layer.")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventDrivenElements")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventDrivenElements")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 

@@ -8,11 +8,14 @@ its quite easy and charming to apply this mechanism among Model layer and ViewMo
 
 How to use it:
 Strictly apply the MVVM design requisite in your project and have all your Models implement the
-AbstractObservableObject
+AbstractObservableModel
 and have your ViewModels implement the
 AbstractObservableViewModel
 and control their monitoring relationships among so-and-so, you will find more information in my github page:
 https://github.com/KailangHuo?tab=repositories
 or you can contact me for more your confuse through: kyanhuo.kyan@gmail.com
+
+Note: the View Model can only register observers from the view model layer, which will guarantee that the operation 
+invoked in view model layer be processed in the UI thread.
 
 This Readme will be updated with more information in later versions.

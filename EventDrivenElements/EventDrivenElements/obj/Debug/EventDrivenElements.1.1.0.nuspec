@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EventDrivenElements</id>
+    <version>1.1.0</version>
+    <title>EventDrivenElements</title>
+    <authors>Kyan Huo</authors>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/KailangHuo/EventDrivenObject</projectUrl>
+    <description>What probs it may solved: In MVVM design pattern, there may have a lot situations that an object container which holds and controls a bunch of sub-objects that need to also receive the status updates or whatever has happened in its holding sub-elements. If you are quite familiar with the schemes that happens among the View and ViewModel layer during MVVM design, you will find its quite easy and charming to apply this mechanism among Model layer and ViewModel layer.</description>
+    <copyright>personal copyright</copyright>
+    <tags>MVVM, DDD, EDA, Event Driven, WPF, Avalonia</tags>
+    <dependencies>
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="E:\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\bin\Debug\net6.0-windows\EventDrivenElements.dll" target="lib\net6.0-windows7.0\EventDrivenElements.dll" />
+    <file src="E:\GitHub\EventDrivenObject\EventDrivenElements\EventDrivenElements\docs\README.md" target="\README.md" />
+  </files>
+</package>
