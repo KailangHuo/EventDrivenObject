@@ -13,6 +13,11 @@ public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenModel, I
     public AbstractEventDrivenViewModel(object hashReferenceContext) {
         if(hashReferenceContext != null)HashReferenceContext = hashReferenceContext;
     }
+    
+
+    public new void RegisterObserver(AbstractEventDrivenViewModel abstractEventDrivenViewModel) {
+        base.RegisterObserver(abstractEventDrivenViewModel);
+    }
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
