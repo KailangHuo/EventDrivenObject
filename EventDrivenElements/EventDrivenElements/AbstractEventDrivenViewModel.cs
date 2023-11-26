@@ -1,8 +1,9 @@
+using System;
 using System.ComponentModel;
 
 namespace EventDrivenElements; 
 
-public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenModel, INotifyPropertyChanged {
+public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenObject, INotifyPropertyChanged {
 
     public object HashReferenceContext;
 
@@ -13,10 +14,10 @@ public abstract class AbstractEventDrivenViewModel : AbstractEventDrivenModel, I
     public AbstractEventDrivenViewModel(object hashReferenceContext) {
         if(hashReferenceContext != null)HashReferenceContext = hashReferenceContext;
     }
-    
 
-    public new void RegisterObserver(AbstractEventDrivenViewModel abstractEventDrivenViewModel) {
-        base.RegisterObserver(abstractEventDrivenViewModel);
+
+    public void RegisterObserver(AbstractEventDrivenViewModel drivenViewModel) {
+        base.RegisterEventDrivenObject(drivenViewModel);
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
